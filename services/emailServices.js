@@ -43,7 +43,7 @@ async function sendResetPasswordEmail(email, otp) {
   const transporter = createTransporter();
 
   const mailOptions = {
-    from: "your@example.com",
+    from: "sanjaysingh26112000@gmail.com",
     to: email,
     subject: "Pizzarush - Reset Your Password",
     html: `<p>Hello,</p><p>You have requested to reset your password. Your OTP is: <strong>${otp}</strong></p><p>This OTP will expire in one minute. If you did not request this, please ignore this email.</p>`,
