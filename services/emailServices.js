@@ -22,7 +22,7 @@ const createTransporter = () => {
 async function sendVerificationEmail(email, verificationToken) {
   const transporter = createTransporter();
 
-  const verificationLink = `http://localhost:3500/api/auth/verify?token=${verificationToken}`;
+  const verificationLink = `https://pizzarush-api.onrender.com/api/auth/verify?token=${verificationToken}`;
 
   const mailOptions = {
     from: "sanjaysingh26112000@gmail.com",
