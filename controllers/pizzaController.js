@@ -25,7 +25,7 @@ const createPizza = async (req, res) => {
 
           const cloudinaryBaseUrl =
             "https://res.cloudinary.com/dewblf95z/image/upload/";
-          const transformedImageUrl = `${cloudinaryBaseUrl}w_640,h_403,c_fill/${result.public_id}.${result.format}`;
+          const transformedImageUrl = `${cloudinaryBaseUrl}w_640,h_640,c_fill/${result.public_id}.${result.format}`;
 
           const newPizza = new pizzaModel({
             name,
@@ -102,7 +102,7 @@ const updatePizza = async (req, res) => {
           });
           const cloudinaryBaseUrl =
             "https://res.cloudinary.com/dewblf95z/image/upload/";
-          const transformedImageUrl = `${cloudinaryBaseUrl}w_640,h_403,c_fill/${result.public_id}.${result.format}`;
+          const transformedImageUrl = `${cloudinaryBaseUrl}w_640,h_640,c_fill/${result.public_id}.${result.format}`;
           updatedPizzaData.image = transformedImageUrl;
         }
 
