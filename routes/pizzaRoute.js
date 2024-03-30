@@ -1,6 +1,5 @@
 import express from "express";
 import { requireSignIn, isAdmin } from "../middlewares/authMiddlewares.js";
-import storage from "../helpers/fileStorage.js";
 import {
   createPizza,
   updatePizza,
@@ -9,14 +8,11 @@ import {
   getRelatedPizzas,
   deletePizzaById,
 } from "../controllers/pizzaController.js";
-import multer from "multer";
 import dotenv from "dotenv";
 
 dotenv.config();
 
 const router = express.Router();
-
-const upload = multer({ storage: storage }).single("image");
 
 // create a new pizza
 router.post("/create", requireSignIn, isAdmin, createPizza);

@@ -1,5 +1,9 @@
 import pizzaModel from "../models/pizzaModel.js";
 import cloudinary from "cloudinary";
+import multer from "multer";
+import storage from "../helpers/fileStorage.js";
+
+const upload = multer({ storage: storage }).single("image");
 
 const createPizza = async (req, res) => {
   try {
