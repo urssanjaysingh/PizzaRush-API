@@ -1,6 +1,9 @@
 import userModel from "../models/userModel.js";
 import { comparePassword, hashPassword } from "../helpers/authHelper.js";
-import { sendVerificationEmail } from "../services/emailServices.js";
+import {
+  sendVerificationEmail,
+  sendResetPasswordEmail,
+} from "../services/emailServices.js";
 import { generateVerificationToken, generateOTP } from "../utils/utils.js";
 import JWT from "jsonwebtoken";
 import path, { dirname } from "path";
