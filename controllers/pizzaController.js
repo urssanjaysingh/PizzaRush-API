@@ -139,7 +139,7 @@ const updatePizza = async (req, res) => {
 
 const getAllPizzas = async (req, res) => {
   try {
-    const pizzas = await pizzaModel.find({});
+    const pizzas = await pizzaModel.find({}).sort({ createdAt: -1 });
     res.send(pizzas);
   } catch (err) {
     res.status(500).json({ message: "Error fetching pizzas", error: err });
