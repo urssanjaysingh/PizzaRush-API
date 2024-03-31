@@ -42,23 +42,19 @@ PizzaRush API is equipped with the following features:
 
 4. **Payment Integration:**
 
-   - Integration with Razorpay checkout for secure payments.
-   - Test mode available for dummy transactions.
+   - Integration of braintree gateway for payments.
+   - Test mode for dummy transactions.
 
-5. **Inventory Management:**
-
-   - Admins can manage inventory for pizza bases, sauces, cheese, and veggies.
-
-6. **Order Management:**
+5. **Order Management:**
 
    - Admins receive and process orders, updating stock accordingly.
    - Users can track order status changes in their dashboard.
 
-7. **Notification System:**
+6. **Notification System:**
 
    - Automatic notifications to admin email when stock goes below a threshold.
 
-8. **Order Status Updates:**
+7. **Order Status Updates:**
    - Admin updates order status, reflecting changes in the user dashboard.
 
 ## Technologies
