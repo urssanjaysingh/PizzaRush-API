@@ -103,7 +103,7 @@ const getAllOrders = async (req, res) => {
           model: "Pizzas",
         },
       })
-      .populate("buyer", "name")
+      .populate("buyer", "name", "address")
       .sort({ createdAt: -1 });
 
     res.status(200).send({
