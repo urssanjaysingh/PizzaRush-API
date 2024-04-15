@@ -52,20 +52,6 @@ async function getAllUsers(req, res) {
   }
 }
 
-// async function deleteUserById(req, res) {
-//   const userId = req.params.userId;
-//   try {
-//     const deletedUser = await userModel.findByIdAndDelete(userId);
-//     if (!deletedUser) {
-//       return res.status(404).send({ message: "User not found" });
-//     }
-//     res.status(200).send({ message: "User deleted successfully" });
-//   } catch (error) {
-//     console.error("Error deleting user:", error);
-//     res.status(500).send({ message: "Error deleting user" });
-//   }
-// }
-
 async function deleteUserById(req, res) {
   const userId = req.params.userId;
   try {
