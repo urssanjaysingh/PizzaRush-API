@@ -1,4 +1,5 @@
 import userModel from "../models/userModel.js";
+import orderModel from "../models/orderModel.js";
 import { hashPassword } from "../helpers/authHelper.js";
 
 async function updateProfile(req, res) {
@@ -51,17 +52,39 @@ async function getAllUsers(req, res) {
   }
 }
 
+// async function deleteUserById(req, res) {
+//   const userId = req.params.userId;
+//   try {
+//     const deletedUser = await userModel.findByIdAndDelete(userId);
+//     if (!deletedUser) {
+//       return res.status(404).send({ message: "User not found" });
+//     }
+//     res.status(200).send({ message: "User deleted successfully" });
+//   } catch (error) {
+//     console.error("Error deleting user:", error);
+//     res.status(500).send({ message: "Error deleting user" });
+//   }
+// }
+
 async function deleteUserById(req, res) {
   const userId = req.params.userId;
   try {
+    // Find and delete all orders associated with the user
+    await orderModel.deleteMany({ buyer: userId });
+
+    // Delete the user
     const deletedUser = await userModel.findByIdAndDelete(userId);
     if (!deletedUser) {
       return res.status(404).send({ message: "User not found" });
     }
-    res.status(200).send({ message: "User deleted successfully" });
+    res
+      .status(200)
+      .send({ message: "User and associated orders deleted successfully" });
   } catch (error) {
-    console.error("Error deleting user:", error);
-    res.status(500).send({ message: "Error deleting user" });
+    console.error("Error deleting user and associated orders:", error);
+    res
+      .status(500)
+      .send({ message: "Error deleting user and associated orders" });
   }
 }
 
