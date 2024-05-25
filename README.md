@@ -4,11 +4,6 @@ Welcome to the PizzaRush API repository! This API serves as the backend for the 
 
 [![Live API](https://img.shields.io/badge/-Live%20API-brightgreen?style=for-the-badge)](https://pizzarush-api.onrender.com/)
 
-<<<<<<< HEAD
-=======
----
-
->>>>>>> d3d589d654550446407121885f6fc9097f49970b
 ## Table of Contents
 
 - [PizzaRush API](#pizzarush-api)
@@ -55,15 +50,11 @@ PizzaRush API is equipped with the following features:
    - Admins receive and process orders, updating stock accordingly.
    - Users can track order status changes in their dashboard.
 
-<<<<<<< HEAD
 6. **Notification System:**
 
    - Automatic notifications to admin email when stock goes below a threshold.
 
 7. **Order Status Updates:**
-=======
-6. **Order Status Updates:**
->>>>>>> d3d589d654550446407121885f6fc9097f49970b
    - Admin updates order status, reflecting changes in the user dashboard.
 
 ## Technologies
