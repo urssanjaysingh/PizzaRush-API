@@ -166,7 +166,7 @@ const getRelatedPizzas = async (req, res) => {
   try {
     const { category } = req.params;
 
-    // Use MongoDB aggregation to randomly select related pizzas based on the provided category
+    // Use MongoDB aggregation to randomly select related pizzas based on the provided category and limit to 3 samples
     const relatedPizzas = await pizzaModel.aggregate([
       { $match: { category } },
       { $sample: { size: 3 } },
